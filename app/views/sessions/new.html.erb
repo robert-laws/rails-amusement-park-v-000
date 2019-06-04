@@ -19,7 +19,7 @@
       </div>
       <div class="form-group">
         <%= label_tag "Name" %>
-        <%= select_tag :name, @users.map {|a| [a.name, a.id]}, { prompt: "Select a User" }, { class: "form-control"} %>
+        <%= select_tag :name, options_for_select(@users.collect{ |u| [u.name, u.id] }) %>
       </div>
       <div class="form-group">
         <%= label_tag "Password" %>
