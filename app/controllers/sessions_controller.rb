@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def new
+    @users = User.all
   end
 
   def create
