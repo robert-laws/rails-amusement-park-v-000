@@ -37,6 +37,16 @@
       </div>
     </div>
 
+    <% if !flash[:notice].blank? %>
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col">
+            <%= flash[:notice] %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
     <!-- content -->
     <div class="container"  role="main">
       <%= yield %>
