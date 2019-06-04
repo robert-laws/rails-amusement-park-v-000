@@ -15,7 +15,7 @@
     <%= form_tag(sessions_path) do %>
       <div class="form-group">
         <%= label_tag "Name" %>
-        <%= select_tag :name, options_for_select(@users.collect{ |u| [u.name, u.id] }) %>
+        <%= select_tag :user_name, options_for_select(@users.collect{ |u| [u.name, u.id] }) %>
       </div>
       <div class="form-group">
         <%= label_tag "Password" %>
