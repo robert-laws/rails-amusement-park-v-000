@@ -15,14 +15,14 @@
     <%= form_tag(sessions_path) do %>
       <div class="form-group">
         <%= label_tag "Name" %>
-        <%= select_tag :user_name, options_for_select(@users.collect{ |u| [u.name, u.id] }) %>
+        <%= select_tag :user_name, options_for_select(@users.collect{ |u| [u.name, u.name] }, params[:name]) %>
       </div>
       <div class="form-group">
         <%= label_tag "Password" %>
         <%= password_field_tag :password, params[:password], class: "form-control", placeholder: "Please enter a password" %>
       </div>
       <div class="form-group">
-        <%= submit_tag "Sign In", class: "btn btn-primary" %>
+        <%= submit_tag "Login", class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>
